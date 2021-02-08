@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="challenge5.css"><link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+        <title>Challenge 5</title>
+    </head>
+    <body>
+        <div id="main-thumb">
+            <div id="images-area">
+                <img src="illustration-woman-online-desktop.svg" alt="Illustration1" id="bg-image1">
+                <img src="bg-pattern-desktop.svg" alt="Illustration2" id="bg-image2">
+                <img src="illustration-box-desktop.svg" alt="Illustration3" id="bg-image3">
+            </div>
+            <div id="question-answers">
+                <h2>FAQ</h2>
+                <button class="accordion">How many team members can I invite ?</button>
+                <div class="panel"><span id="style1">You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.</span></div>
+                <button class="accordion">What is the maximum file upload size ?</button>
+                <div class="panel"><span id="style1">No more than 2GB.</span> All files in your account must fit your alloted storage space.</div>
+                <button class="accordion">How do i reset my password ?</button>
+                <div class="panel">
+                    Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.
+                </div>
+                <button class="accordion">Can i cancel my subscription ?</button>
+                <div class="panel">Yes! Send us a message and we’ll process your request no questions asked.</div>
+                <button class="accordion">Do you provide any additional support ?</button>
+                <div class="panel"><span id="style1">Chat and email support is available 24/7.</span> Phone lines are open during normal business hours.</div>
+            </div>
+        </div>
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+            for (i = 0; i < acc.length; i++){
+                acc[i].addEventListener("click",function() {
+                    this.classList.toggle("active");
+
+                    var panel = this.nextElementSibling;
+                    if(panel.style.maxHeight){
+                        panel.style.maxHeight = null;
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                });
+            }
+        </script>
+    </body>
+</html>
